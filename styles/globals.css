@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.current-link {
+  opacity: 0.6; /* Set the desired opacity for the current link */
+  color: darken(#505050, 20%); /* Replace #yourColor with the color you want to darken */
+}
+
+.donation-bg {
+background-color: #DF3031;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg stroke='%23000000' stroke-width='0' %3E%3Crect fill='%23E34F4F' x='-60' y='-60' width='110' height='240'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+@keyframes wave {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+}
+
+
+.scroll-prompt {
+  position: relative;
+}
+
+.scroll-prompt .RxCaretDown {
+  animation: wave 2s infinite;
+}
+
+.icon-link {
+  color: #0e518c;
+  transition: color 0.3s, transform 0.3s;
+  display: inline-block; /* Ensures the element can be transformed */
+}
+
+.icon-link:hover {
+  color: #DF3031;
+  transform: translateY(1px);
+}
+
+.soft {
+  border-radius: 2px;
+}
+
+.iconContainer {
+  transition: background-color 0.5s, border-color 0.5s, color 1s; /* Adjust color transition duration */
+}
+
+.text-title {
+  @apply text-2xl sm:text-3xl lg:text-4xl font-bold;
+}
+
+.text-h2 {
+  @apply text-3xl sm:text-4xl lg:text-5xl font-semibold ;
+}
+
+.text-h3 {
+  @apply text-2xl lg:text-3xl font-medium ;
+
+}
+
+.text-pcard { 
+  @apply text-lg lg:text-3xl;
+}
+
+.text-sub {
+  @apply text-xl lg:text-xl ;
+}
+
+.text-little {
+  @apply text-[20px];
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Ropa Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --c-black: #000;
+  --c-yellow: #fdf147;
+
+  --primary: '#0e518c';
+  --primary-highlight: '#1161A7';
+  --secondary: '#DF3031';
+  --secondary-highlight: '#E34F4F';
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  background-color: white;
+}
+
+::selection {
+  background-color: var(--c-yellow);
+  color: var(--c-black);
+}
